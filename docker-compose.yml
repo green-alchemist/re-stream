@@ -1,0 +1,18 @@
+# Specifies the version of the Docker Compose file format
+version: '3.8'
+
+# Defines the services (containers) that make up your application
+services:
+  nginx-rtmp:
+    # Tells Docker Compose to build the image from the Dockerfile in the current directory
+    build: .
+    # Names the container for easy reference
+    container_name: diy-restream-server
+    # Maps port 1935 on your host machine to port 1935 in the container
+    ports:
+      - "1935:1935"
+    # Loads environment variables from a file named .env in the same directory
+    env_file:
+      - .env
+    # Ensures the container will restart automatically if it crashes or the system reboots
+    restart: unless-stopped

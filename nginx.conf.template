@@ -1,0 +1,22 @@
+# This is a template file. Variables like $TWITCH_KEY will be replaced by the startup script.
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+
+rtmp {
+    server {
+        listen 1935;
+        chunk_size 4096;
+
+        application live {
+            live on;
+            record off;
+
+            # The startup script will replace these variables with your actual keys
+            push rtmp://live.twitch.tv/app/${TWITCH_KEY};
+            # push rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_KEY};
+            # push rtmps://fa7a127ee0.global-contribute.live-video.net:443/app/${KICK_KEY};
+        }
+    }
+}
