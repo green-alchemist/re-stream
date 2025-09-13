@@ -99,7 +99,9 @@ rtmp {
 
 ```
 .
-├── .env                  # Your secret stream keys (DO NOT COMMIT)
+├── .env                  # Your secret stream keys (IGNORED BY GIT)
+├── .dockerignore         # Specifies files to exclude from Docker build context
+├── .gitignore            # Specifies files for Git to ignore
 ├── docker-compose.yml    # Defines the Docker service and configuration
 ├── Dockerfile            # Instructions for building the Docker image
 ├── nginx.conf.template   # NGINX configuration template

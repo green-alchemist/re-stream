@@ -1,0 +1,15 @@
+# Ignore the git repository itself
+.git/
+.gitignore
+
+# Ignore the environment file, it should never be in the image
+.env
+
+# Ignore the README file, not needed for the server to run
+README.md
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore editor configuration
+.vscode/

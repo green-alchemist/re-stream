@@ -1,1 +1,16 @@
+# --- Secrets ---
+# Ignore the environment file containing secret stream keys.
+# This is the most important line in this file!
 .env
+
+# --- Docker ---
+# Ignore local Docker build artifacts and cache.
+.dockerignore
+
+# --- System Files ---
+# Ignore macOS specific files
+.DS_Store
+
+# --- Editor/IDE specific files ---
+# Visual Studio Code
+.vscode/
